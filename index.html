@@ -1,0 +1,441 @@
+<!--
+       Bem aqui terá todo o cardápio que terá 
+       durante a semana e também terá as posições 
+       de cada turma no horário do almoço.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilocoffee.css">
+        <link rel="shortcut icon" href="https://raw.githubusercontent.com/TodosJuntosJAA/site/main/img/android-chrome-192x192.png" type="image/x-icon">
+        <title>Cardápio</title>
+        <style>
+            /*@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,400);
+body {
+    background:rgb(223,189,150);
+    font-family: 'Josefin Sans', sans-serif;
+    text-align:center;
+}
+.coffeeee{
+    margin-top: -7%;
+}
+.cup {
+    width:76px;
+    height:76px;
+    background:#dedede;
+    border-radius:50%;
+    position: relative;
+    left:50%;
+    margin-left:-38px;
+    top:100px;
+    box-shadow:-4px -1px 0 rgba(0,0,0,0.2);
+}
+.cup:after{
+    content:"";
+    width:66px;
+    height:66px;
+    position:absolute;
+    border-radius:50%;
+    background:linear-gradient(-45deg, #cbcbcb, #f2f2f2 );
+    left:50%;
+    margin-left:-33px;
+    top:5px;
+}
+
+.coffee{
+    width:47px;
+    height:47px;
+    background:#613317;
+    border-radius:50%;
+    position:absolute;
+    left:50%;
+    margin-left:-25px;
+    z-index:1;
+    top:50%;
+    margin-top:-26px;
+    border:3px solid #e9e9e9;
+    box-shadow:-3px 2px 0 rgba(0,0,0,0.1);
+    transform:rotate(30deg);
+    transition:transform 0.3s;
+}
+.coffee:after{ 
+    content:"";
+    width:15px;
+    height:8px;
+    position:absolute;
+    left:-19px;
+    top:18px;
+    background:linear-gradient(90deg, #d6d6d6, #aeaeae);
+    box-shadow:0px 2px 0 rgba(0,0,0,0.2);
+}
+.coffee:before {
+    content:"";
+    width:47px;
+    height:47px;
+    background-image: radial-gradient(75% 59%, ellipse, rgba(255,255,255,0.2), transparent 95%), radial-gradient(5% 9%, ellipse, rgba(255,255,255,0.1), transparent 5%), radial-gradient(0% 0%, ellipse, rgba(255,255,255,0.3), transparent 55%);
+    background-image: -webkit-radial-gradient(75% 59%, ellipse, rgba(255,255,255,0.2), transparent 95%), -webkit-radial-gradient(5% 9%, ellipse, rgba(255,255,255,0.1), transparent 5%), -webkit-radial-gradient(0% 0%, ellipse, rgba(255,255,255,0.3), transparent 55%);
+    background-image: -moz-radial-gradient(75% 59%, ellipse, rgba(255,255,255,0.2), transparent 95%), -moz-radial-gradient(5% 9%, ellipse, rgba(255,255,255,0.1), transparent 5%), -moz-radial-gradient(0% 0%, ellipse, rgba(255,255,255,0.3), transparent 55%);
+    position:absolute;
+    left:0;
+    border-radius:50%;
+}
+.cup:hover .coffee {
+    transform:rotate(15deg);
+}
+.smoke {
+    width:80px;
+    height:100px; 
+     
+    position:relative;
+    left:50%;
+    margin-left:-40px;
+    margin-bottom: -1%;
+    background-image: -webkit-radial-gradient(75% 59%, ellipse, rgba(255,255,255,0.2), transparent 25%), -webkit-radial-gradient(25% 70%, ellipse, rgba(255,255,255,0.2), transparent 15%), -webkit-radial-gradient(35% 61%, ellipse, rgba(255,255,255,0.2), transparent 10%), -webkit-radial-gradient(55% 35%, ellipse, rgba(255,255,255,0.2), transparent 15%);
+    background-image: -moz-radial-gradient(75% 59%, ellipse, rgba(255,255,255,0.2), transparent 25%), -moz-radial-gradient(25% 70%, ellipse, rgba(255,255,255,0.2), transparent 15%), -moz-radial-gradient(35% 61%, ellipse, rgba(255,255,255,0.2), transparent 10%), -moz-radial-gradient(55% 35%, ellipse, rgba(255,255,255,0.2), transparent 15%);
+    background-image: radial-gradient(75% 59%, ellipse, rgba(255,255,255,0.2), transparent 25%), radial-gradient(25% 70%, ellipse, rgba(255,255,255,0.2), transparent 15%), radial-gradient(35% 61%, ellipse, rgba(255,255,255,0.2), transparent 10%), radial-gradient(55% 35%, ellipse, rgba(255,255,255,0.2), transparent 15%);
+    animation:bk 11s infinite ;
+}
+.smoke:after {
+    content:"";
+    width:100px;
+    height:100px; 
+
+    position:absolute;
+    background-image: -webkit-radial-gradient(75% 59%, ellipse, rgba(255,255,255,0.2), transparent 25%), -webkit-radial-gradient(25% 70%, ellipse, rgba(255,255,255,0.2), transparent 15%), -webkit-radial-gradient(35% 61%, ellipse, rgba(255,255,255,0.2), transparent 10%);
+    background-image: -moz-radial-gradient(75% 59%, ellipse, rgba(255,255,255,0.2), transparent 25%), -moz-radial-gradient(25% 70%, ellipse, rgba(255,255,255,0.2), transparent 15%), -moz-radial-gradient(35% 61%, ellipse, rgba(255,255,255,0.2), transparent 10%);
+    background-image: radial-gradient(75% 59%, ellipse, rgba(255,255,255,0.2), transparent 25%), radial-gradient(25% 70%, ellipse, rgba(255,255,255,0.2), transparent 15%), radial-gradient(35% 61%, ellipse, rgba(255,255,255,0.2), transparent 10%);
+    animation:bk 2s 1s infinite;
+}
+@keyframes bk {
+    0%{ background-position:0 0; opacity:0; }
+    15%, 85% { opacity:1;}
+    100%{ background-position:-20px -25px, -5px -25px, 0px -25px, 0px -25px; opacity:0;}
+}
+.txt{
+    position:absolute;
+    top:184px;
+    width:150px;
+    left:50%;
+    margin-left:-75px;
+}
+.txt a{
+    text-decoration:none;
+    color:#613317;
+}
+.txt a:hover {
+    text-decoration:underline;
+}*/
+
+body {
+    background:rgb(223,189,150);
+    font-family: 'Josefin Sans', sans-serif;
+    text-align:center;
+}
+  @keyframes wave {
+    0% {opacity: 0; transform: translateY(15px)}
+    50% {opacity: 1; transform: translateY(0)}
+    100% {opacity: 0; transform: translateY(-15px)}
+  }
+  .loader ul {
+   
+    padding: 0;
+
+    width: 60px;
+    text-align: center;
+    animation: wave 2.5s infinite linear;
+    animation-fill-mode: forwards;
+  }
+  .loader li {
+    display: inline-block;
+    background: #f7f0de;
+    height: 30px;
+    width: 9px;
+    border-radius: 0 100%;
+    transform: rotate(12deg);
+  }
+  .cup {
+    background: #f7f0de;
+    width: 60px;
+    height: 54px;
+    border-radius: 0 0 50% 50%;
+    position: relative;
+  }
+  .cup:before {
+    content: "";
+    justify-content: center;
+    position: absolute;
+    width: 66px;
+    height: 20px;
+    border-radius: 50%;
+    background: inherit;
+    left: -3px;
+    top: -10px;
+  }
+  .cup:after {
+    content: "";
+    justify-content: center;
+    position: absolute;
+    width: 56px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3A2F28;
+    left: 2px;
+    top: -6px;
+  }
+  .loader span {
+    background: #f7f0de;
+    width: 13px;
+    height: 20px;
+    position: absolute; 
+    right: -13px;
+    top: 10px;
+    border-radius: 0 50% 50% 0;
+  }
+  .loader span:before {
+    content: "";
+    justify-content: flex-start;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    background:rgb(223,189,150);
+    width: 10px;
+    height: 12px;
+    border-radius: 0 50% 50% 0;
+  }
+  .loader span:after {
+    content: "";
+    justify-content: flex-start;
+    position: absolute;
+    top: 40px;
+    left: -50px;
+    background: #f7f0de;
+    width: 40px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .tudo{
+    display: inline-block;
+  }
+        </style>
+    </head>
+    <body>
+        <!--Navbar-->
+            <nav class="navbar navbar-expand-lg bg-dark" style="color: black;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="https://todosjuntosjaa.github.io/site/index.html"><img src="https://todosjuntosjaa.github.io/site/img/laco1.png" alt="" srcset="" style="margin-left: 4px;color: white;" >Chapa Todos Juntos<img src="https://todosjuntosjaa.github.io/site/img/teste1.png" alt="" srcset="" style="margin-left: 7px;margin-top: -5px;"></a>
+                    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 2%;">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="https://todosjuntosjaa.github.io/site/menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-white" href="https://todosjuntosjaa.github.io/site/sugestao.html">Sugestões</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="https://todosjuntosjaa.github.io/cardapio/cardapio.html">Cardápio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled text-white">Jornal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="https://drive.google.com/file/d/1jC1qt6e4Qq6vZNqlbpW2HiEp1z76MYmt/view?usp=drivesdk">Edital da SECTEC</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        <!--Termino do Navbar-->
+        
+        <!--
+            <div class="coffeeee">
+                <div class="cup" >
+                    <div class="coffee">
+                    </div>
+                </div>
+                <div class="smoke">
+                </div>
+            </div>
+            <br>
+        -->
+
+          <!--Café-->
+
+          <div class="tudo">
+          <div class="loader">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="cup"><span></span></div>
+            </div></div><br><br>
+    <!--Termino do Café-->
+
+
+
+        <!--Cardapio-->
+            <h1>Refeições</h1>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Segunda</th>
+                            <th scope="col">Terça</th>
+                            <th scope="col">Quarta</th>
+                            <th scope="col">Quinta</th>
+                            <th scope="col">Sexta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <hr>
+                            <th scope="row">Café da manhã</th>
+                            <td>Cuscuz com café</td>
+                            <td>Canja</td>
+                            <td>Cuscuz com café</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                
+                        <tr>
+                            <th scope="row">Almoço</th>
+                            <td>Creme de galinha</td>
+                            <td>Frango ao molho</td>
+                            <td>Feijoada</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+              
+                        <tr>
+                            <th scope="row">Lanche</th>
+                            <td>Pão com patê</td>
+                            <td>Bolacha com suco</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+        <!--Termino do cardapio-->
+
+        <!--Posições de cada turma-->
+            <h1>Posições</h1>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>  
+                            <th scope="col"></th>
+                            <th scope="col">Segunda</th>
+                            <th scope="col">Terça</th>
+                            <th scope="col">Quarta</th>
+                            <th scope="col">Quinta</th>
+                            <th scope="col">Sexta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!--1° a serem chamados-->
+                            <th scope="row">1°</th>
+                            <td>2° Info-A</td>
+                            <td>3° S.D.T</td>
+                            <td>3° Enf</td>
+                            <td>1° Info</td>
+                            <td>1° Contabi</td>
+                        </tr>
+                        <tr>
+                            <!--2° a serem chamados-->
+                            <th scope="row">2°</th>
+                            <td>2° Enf</td>
+                            <td>2° Info-A</td>
+                            <td>3° S.D.T</td>
+                            <td>3° Enf</td>
+                            <td>1° Info</td>
+                        </tr>
+                    
+                        <tr>
+                            <!--3° a serem chamados-->
+                            <th scope="row">3°</th>
+                            <td>2° Info-B</td>
+                            <td>2° Enf</td>
+                            <td>2° Info-A</td>
+                            <td>3° S.D.T</td>
+                            <td>3° Enf</td>
+                        </tr>
+              
+                        <tr>
+                            <!--4° a serem chamados-->
+                            <th scope="row">4°</th>
+                            <td>3° Info</td>
+                            <td>2° Info-B</td>
+                            <td>2° Enf</td>
+                            <td>2° Info-A</td>
+                            <td>3° S.D.T</td>
+                        </tr>
+                    
+                        <tr>
+                            <!--5° a serem chamados-->
+                            <th scope="row">5°</th>
+                            <td>1° Enf</td>
+                            <td>3° Info</td>
+                            <td>2° Info-B</td>
+                            <td>2° Enf</td>
+                            <td>2° Info-A</td>
+                        </tr>
+                
+                        <tr>
+                            <!--6° a serem chamados-->
+                            <th scope="row">6°</th>
+                            <td>1° Contabi</td>
+                            <td>1° Enf</td>
+                            <td>3° Info</td>
+                            <td>2° Info-B</td>
+                            <td>2° Enf</td>
+                        </tr>
+              
+                        <tr>
+                            <!--7° a serem chamados-->
+                            <th scope="row">7°</th>
+                            <td>1° Info</td>
+                            <td>1° Contabi</td>
+                            <td>1° Enf</td>
+                            <td>3° Info</td>
+                            <td>2° Info-B</td>
+                        </tr>
+              
+                        <tr>
+                            <!--8° a serem chamados-->
+                            <th scope="row">8°</th>
+                            <td>3° Enf</td>
+                            <td>1° Info</td>
+                            <td>1° Contabi</td>
+                            <td>1° Enf</td>
+                            <td>3° Info</td>
+                         </tr>
+            
+                         <tr>
+                            <!--9° a serem chamados-->
+                            <th scope="row">9°</th>
+                            <td>3° S.D.T</td>
+                            <td>3° Enf</td>
+                            <td>1° Info</td>
+                            <td>1° Contabi</td>
+                            <td>1° Enf</td>  
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        <!--Termino das posições de cada turma-->
+       
+        <!--Script do Bootstrap--><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>
